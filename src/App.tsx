@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled, { createGlobalStyle } from "styled-components";
+import {Layout} from 'layout';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0px;
+  }
+`;
+
+const StyledApp = styled.div`
+  background-color:#000;
+  color: #fff;
+  min-height: 100vh;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledApp>
+      <GlobalStyle />
+      <Layout />
+    </StyledApp>
   );
 }
 
